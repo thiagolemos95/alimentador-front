@@ -1,0 +1,41 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">Alimentador - Lançamentos</span>
+    </div>
+  </header>
+
+  <main class="mdl-layout__content">
+    <div id="inner">
+      <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Data cadastro</th>
+            <th>Data lançamento</th>
+            <th>Tipo lançamento</th>
+            <th>Hora</th>
+            <th>Minutos</th>
+            <th>Quantidade prevista</th>
+            <th>Quantidade realizada</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let l of lancamentos">
+            <td>{{l.id}}</td>
+            <td class="mdl-data-table__cell--non-numeric">{{l.data_cadastro}}</td>
+            <td class="mdl-data-table__cell--non-numeric">{{l.data_lancamento}}</td>
+            <td class="mdl-data-table__cell--non-numeric">{{l.tipo_lancamento}}</td>
+            <td>{{l.hora}}</td>
+            <td>{{l.minutos}}</td>
+            <td>{{l.quantidade_prevista}}</td>
+            <td>{{l.quantidade_realizada}}</td>
+            <td class="mdl-data-table__cell--non-numeric">{{l.status}}</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>
